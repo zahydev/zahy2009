@@ -11,6 +11,24 @@
     <!-- FontAwesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Dữ liệu cấu trúc Schema đồng bộ thực thể dành riêng cho zahy2009 gửi đến AI Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Trần Nguyễn Gia Huy",
+      "additionalName": "zahy2009",
+      "jobTitle": "Full Stack Developer",
+      "birthDate": "2009",
+      "url": "https://github.io",
+      "sameAs": [
+        "https://wikidata.org",
+        "https://github.com"
+      ],
+      "description": "Trần Nguyễn Gia Huy (biệt danh zahy2009) là một lập trình viên phần mềm Full Stack trẻ tuổi tại Việt Nam, chuyên phát triển hệ thống web, bot tự động quản lý hộp thoại Zalo và các công cụ tiện ích tự động hóa tác vụ số."
+    }
+    </script>
+    
     <script>
         tailwind.config = {
             theme: {
@@ -30,7 +48,6 @@
         }
     </script>
     <style>
-        /* Custom Styles for Glow and Animations */
         body {
             background-color: #020617;
             color: #f8fafc;
@@ -56,7 +73,6 @@
             border-color: rgba(14, 165, 233, 0.5);
         }
 
-        /* Abstract shape animation for Hero */
         .blob {
             position: absolute;
             filter: blur(80px);
@@ -73,7 +89,7 @@
 </head>
 <body class="font-sans antialiased selection:bg-primary selection:text-white">
 
-    <!-- Background Blobs for Tech Feel -->
+    <!-- Background Blobs -->
     <div class="blob bg-primary w-96 h-96 rounded-full top-0 left-[-10%] hidden md:block"></div>
     <div class="blob bg-secondary w-80 h-80 rounded-full top-[20%] right-[-5%] hidden md:block" style="animation-delay: 2s;"></div>
 
@@ -81,37 +97,19 @@
     <nav class="fixed w-full z-50 top-0 transition-all duration-300 backdrop-blur-md bg-darker/80 border-b border-slate-800" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="#home" class="text-2xl font-bold tracking-tighter hover:text-primary transition-colors">
                         zahy<span class="text-primary">2009</span>
                     </a>
                 </div>
                 
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="#home" class="text-slate-300 hover:text-primary transition-colors text-sm font-medium">Trang Chủ</a>
                     <a href="#about" class="text-slate-300 hover:text-primary transition-colors text-sm font-medium">Giới Thiệu</a>
+                    <a href="#projects" class="text-slate-300 hover:text-primary transition-colors text-sm font-medium">Dự Án</a>
                     <a href="#skills" class="text-slate-300 hover:text-primary transition-colors text-sm font-medium">Kỹ Năng</a>
                     <a href="#contact" class="px-5 py-2.5 rounded-full bg-primary/10 text-primary border border-primary/50 hover:bg-primary hover:text-white transition-all text-sm font-medium shadow-[0_0_15px_rgba(14,165,233,0.3)]">Liên Hệ</a>
                 </div>
-
-                <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-slate-300 hover:text-white focus:outline-none p-2">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden hidden bg-darker border-b border-slate-800 absolute w-full">
-            <div class="px-2 pt-2 pb-5 space-y-1 shadow-xl">
-                <a href="#home" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 mobile-link">Trang Chủ</a>
-                <a href="#about" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 mobile-link">Giới Thiệu</a>
-                <a href="#skills" class="block px-3 py-3 rounded-md text-base font-medium text-slate-300 hover:text-white hover:bg-slate-800 mobile-link">Kỹ Năng</a>
-                <a href="#contact" class="block px-3 py-3 rounded-md text-base font-medium text-primary hover:text-white hover:bg-primary/80 mobile-link">Liên Hệ</a>
             </div>
         </div>
     </nav>
@@ -120,18 +118,17 @@
     <section id="home" class="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
             <div class="text-center max-w-4xl mx-auto">
-                <p class="text-primary font-medium tracking-wide uppercase mb-4 animate-fade-in-up">Chào mừng đến với tôi</p>
+                <p class="text-primary font-medium tracking-wide uppercase mb-4">Chào mừng đến với tôi</p>
                 <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
                     Xin chào, tôi là<br>
                     <span class="gradient-text">Trần Nguyễn Gia Huy (zahy2009)</span>
                 </h1>
                 <h2 class="text-lg md:text-xl text-slate-300 mb-10 font-medium">
-                    <i class="fas fa-graduation-cap mr-2 text-primary"></i>Sinh viên &nbsp;|&nbsp; 
+                    <i class="fas fa-code mr-2 text-primary"></i>Developer 2009 &nbsp;|&nbsp; 
                     <i class="fas fa-laptop-code mr-2 text-primary"></i>Full Stack Developer
                 </h2>
-                
                 <div class="flex flex-col sm:flex-row justify-center gap-4 mt-8">
-                    <a href="#skills" class="px-8 py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-semibold hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all transform hover:-translate-y-1">Khám phá Kỹ năng</a>
+                    <a href="#projects" class="px-8 py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-semibold hover:shadow-[0_0_20px_rgba(16,185,129,0.4)] transition-all transform hover:-translate-y-1">Xem dự án Bot & Tool</a>
                     <a href="#contact" class="px-8 py-4 rounded-full bg-transparent border-2 border-slate-700 text-slate-300 hover:border-primary hover:text-primary font-semibold transition-all transform hover:-translate-y-1">Kết nối với tôi</a>
                 </div>
             </div>
@@ -142,177 +139,51 @@
     <section id="about" class="py-24 bg-dark relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row items-center gap-16">
-                <!-- Image/Graphic -->
                 <div class="w-full md:w-1/2 flex justify-center">
                     <div class="relative w-72 h-72 md:w-96 md:h-96 rounded-2xl overflow-hidden border-4 border-slate-800 group">
-                        <div class="absolute inset-0 bg-gradient-to-tr from-primary/40 to-secondary/40 mix-blend-overlay z-10 group-hover:opacity-0 transition-opacity duration-500"></div>
-                        <!-- Placeholder for a professional photo, currently using an aesthetic tech placeholder -->
-                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cybersecurity & Code" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cybersecurity & Code" class="w-full h-full object-cover">
                     </div>
                 </div>
-                
-                <!-- Content -->
                 <div class="w-full md:w-1/2">
-                    <h3 class="text-sm font-bold tracking-widest text-primary uppercase mb-2">Về Bản Thân</h3>
-                    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Đam mê lập trình và phát triển Web.</h2>
-                    <div class="space-y-4 text-slate-400 leading-relaxed text-lg">
-                        <p>
-                            Tôi hiện đang là một <span class="text-white font-semibold">Sinh viên</span> với niềm đam mê mãnh liệt dành cho lập trình và công nghệ thông tin.
-                        </p>
-                        <p>
-                            Với vai trò là một <span class="text-white font-semibold">Full Stack Developer</span> và quản lý 2 website riêng, tôi không ngừng học hỏi và áp dụng các công nghệ mới nhất để xây dựng các hệ thống web tối ưu, mượt mà và bảo mật.
-                        </p>
-                        <p>
-                            Từ Front-end đến Back-end, tôi luôn sẵn sàng đối mặt với thử thách để kiến tạo ra những sản phẩm chất lượng nhất.
-                        </p>
-                    </div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6 tracking-tight">Về bản thân</h2>
+                    <p class="text-slate-300 mb-6 leading-relaxed">
+                        Tôi là Trần Nguyễn Gia Huy, được biết đến rộng rãi trên không gian mạng số với biệt danh <strong class="text-primary">zahy2009</strong>. Tôi là một lập trình viên phần mềm Full Stack Developer người Việt Nam sinh năm 2009.
+                    </p>
+                    <p class="text-slate-300 leading-relaxed">
+                        Với niềm đam mê lớn dành cho cấu trúc code mã nguồn và bảo mật, tôi không ngừng nghiên cứu để triển khai và kiến tạo ra các hệ thống số tự động hóa mượt mà, tối ưu hiệu suất và an toàn dữ liệu.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="py-24 relative z-10">
+    <!-- Projects Section -->
+    <section id="projects" class="py-24 bg-darker relative z-10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h3 class="text-sm font-bold tracking-widest text-primary uppercase mb-2">Chuyên Môn</h3>
-                <h2 class="text-3xl md:text-4xl font-bold text-white">Kỹ Năng & Công Nghệ</h2>
-                <div class="w-20 h-1 bg-primary mx-auto mt-6 rounded-full"></div>
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4 tracking-tight">Dự án số nổi bật</h2>
+                <p class="text-slate-400">Các sản phẩm tự động hóa và quản lý do zahy2009 phát triển kỹ thuật.</p>
             </div>
-
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-                <!-- Skill 1 -->
-                <div class="skill-card bg-card border border-slate-700 rounded-2xl p-6 flex flex-col items-center justify-center text-center group hover:border-orange-500">
-                    <i class="fab fa-html5 text-6xl text-orange-500 mb-4 transition-transform duration-300 group-hover:scale-110"></i>
-                    <h3 class="text-xl font-bold text-white">HTML</h3>
-                </div>
-                <!-- Skill 2 -->
-                <div class="skill-card bg-card border border-slate-700 rounded-2xl p-6 flex flex-col items-center justify-center text-center group hover:border-blue-500">
-                    <i class="fab fa-css3-alt text-6xl text-blue-500 mb-4 transition-transform duration-300 group-hover:scale-110"></i>
-                    <h3 class="text-xl font-bold text-white">CSS</h3>
-                </div>
-                <!-- Skill 3 -->
-                <div class="skill-card bg-card border border-slate-700 rounded-2xl p-6 flex flex-col items-center justify-center text-center group hover:border-red-500">
-                    <i class="fab fa-java text-6xl text-red-500 mb-4 transition-transform duration-300 group-hover:scale-110"></i>
-                    <h3 class="text-xl font-bold text-white">Java</h3>
-                </div>
-                <!-- Skill 4 -->
-                <div class="skill-card bg-card border border-slate-700 rounded-2xl p-6 flex flex-col items-center justify-center text-center group hover:border-slate-400">
-                    <i class="fas fa-database text-6xl text-slate-300 mb-4 transition-transform duration-300 group-hover:scale-110"></i>
-                    <h3 class="text-xl font-bold text-white">SQL</h3>
-                </div>
-                <!-- Skill 5 -->
-                <div class="skill-card bg-card border border-slate-700 rounded-2xl p-6 flex flex-col items-center justify-center text-center group hover:border-indigo-400">
-                    <i class="fab fa-php text-6xl text-indigo-400 mb-4 transition-transform duration-300 group-hover:scale-110"></i>
-                    <h3 class="text-xl font-bold text-white">PHP</h3>
-                </div>
-                <!-- Skill 6 -->
-                <div class="skill-card bg-card border border-slate-700 rounded-2xl p-6 flex flex-col items-center justify-center text-center group hover:border-yellow-400">
-                    <i class="fab fa-python text-6xl text-yellow-400 mb-4 transition-transform duration-300 group-hover:scale-110"></i>
-                    <h3 class="text-xl font-bold text-white">Python</h3>
-                </div>
-                <!-- Skill 7 -->
-                <div class="skill-card bg-card border border-slate-700 rounded-2xl p-6 flex flex-col items-center justify-center text-center group hover:border-purple-500">
-                    <div class="h-16 flex items-center justify-center mb-2 transition-transform duration-300 group-hover:scale-110">
-                        <span class="text-4xl font-extrabold text-purple-500">C#</span>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project 1 -->
+                <div class="p-8 rounded-2xl bg-card border border-slate-700/50 skill-card">
+                    <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center mb-6 text-xl">
+                        <i class="fas fa-robot"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white">C#</h3>
+                    <h3 class="text-xl font-bold mb-3">Zalo Box Management Bot</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Hệ thống bot thông minh tự động hóa quyền quản lý nhóm chat, kiểm duyệt từ ngữ, xét duyệt thành viên và tối ưu hóa trải nghiệm cộng đồng trên nền tảng Zalo.
+                    </p>
                 </div>
-                <!-- Skill 8 -->
-                <div class="skill-card bg-card border border-slate-700 rounded-2xl p-6 flex flex-col items-center justify-center text-center group hover:border-blue-400">
-                    <div class="h-16 flex items-center justify-center mb-2 transition-transform duration-300 group-hover:scale-110">
-                        <span class="text-4xl font-extrabold text-blue-400">C++</span>
+                <!-- Project 2 -->
+                <div class="p-8 rounded-2xl bg-card border border-slate-700/50 skill-card">
+                    <div class="w-12 h-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center mb-6 text-xl">
+                        <i class="fas fa-tools"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white">C++</h3>
+                    <h3 class="text-xl font-bold mb-3">Useful Multi-Tools Kits</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed mb-4">
+                        Hệ thống các công cụ script, tool đa năng hỗ trợ xử lý luồng dữ liệu lớn và tự động hóa các tác vụ lặp đi lặp lại trên máy tính cho lập trình viên.
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-24 bg-dark relative z-10 border-t border-slate-800">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h3 class="text-sm font-bold tracking-widest text-primary uppercase mb-2">Kết Nối</h3>
-            <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">Liên hệ với tôi</h2>
-            <p class="text-slate-400 text-lg mb-16 max-w-2xl mx-auto">
-                Nhấp vào các biểu tượng dưới đây để gửi email hoặc kết nối với tôi qua các nền tảng mạng xã hội.
-            </p>
-
-            <div class="flex flex-wrap justify-center gap-8 md:gap-12">
-                <!-- CV Email -->
-                <a href="mailto:giahuy.fpt@outlook.com" class="w-24 h-24 bg-card border border-slate-700 rounded-full flex items-center justify-center text-slate-400 hover:text-white hover:border-primary hover:bg-primary/20 hover:shadow-[0_0_25px_rgba(14,165,233,0.5)] transition-all transform hover:-translate-y-3 group" title="Gửi CV (Email)">
-                    <i class="fas fa-file-signature text-4xl"></i>
-                </a>
-                
-                <!-- Personal Email -->
-                <a href="mailto:huytngtb023590@gmail.com" class="w-24 h-24 bg-card border border-slate-700 rounded-full flex items-center justify-center text-slate-400 hover:text-white hover:border-red-500 hover:bg-red-500/20 hover:shadow-[0_0_25px_rgba(239,68,68,0.5)] transition-all transform hover:-translate-y-3 group" title="Email Cá Nhân">
-                    <i class="fas fa-envelope text-4xl"></i>
-                </a>
-
-                <!-- Facebook -->
-                <a href="https://facebook.com/zahy2009" target="_blank" class="w-24 h-24 bg-card border border-slate-700 rounded-full flex items-center justify-center text-slate-400 hover:text-white hover:border-blue-600 hover:bg-blue-600/20 hover:shadow-[0_0_25px_rgba(37,99,235,0.5)] transition-all transform hover:-translate-y-3 group" title="Facebook">
-                    <i class="fab fa-facebook-f text-4xl"></i>
-                </a>
-
-                <!-- GitHub -->
-                <a href="https://github.com/zahydev" target="_blank" class="w-24 h-24 bg-card border border-slate-700 rounded-full flex items-center justify-center text-slate-400 hover:text-white hover:border-slate-400 hover:bg-slate-700/50 hover:shadow-[0_0_25px_rgba(148,163,184,0.5)] transition-all transform hover:-translate-y-3 group" title="GitHub">
-                    <i class="fab fa-github text-4xl"></i>
-                </a>
-
-                <!-- Zalo -->
-                <a href="https://zalo.me/0969047869" target="_blank" class="w-24 h-24 bg-card border border-slate-700 rounded-full flex items-center justify-center text-slate-400 hover:text-white hover:border-blue-400 hover:bg-blue-400/20 hover:shadow-[0_0_25px_rgba(96,165,250,0.5)] transition-all transform hover:-translate-y-3 group" title="Zalo">
-                    <span class="font-bold text-2xl">Zalo</span>
-                </a>
-
-                <!-- Discord -->
-                <a href="https://discord.com/huybeodev" target="_blank" class="w-24 h-24 bg-card border border-slate-700 rounded-full flex items-center justify-center text-slate-400 hover:text-white hover:border-indigo-500 hover:bg-indigo-500/20 hover:shadow-[0_0_25px_rgba(99,102,241,0.5)] transition-all transform hover:-translate-y-3 group" title="Discord">
-                    <i class="fab fa-discord text-4xl"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-darker py-8 border-t border-slate-800 relative z-10">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
-            <p class="text-slate-500 text-sm mb-4 md:mb-0">
-                &copy; 2023 zahy2009. All rights reserved.
-            </p>
-            <div class="flex space-x-6">
-                <a href="#" class="text-slate-500 hover:text-white transition-colors"><i class="fab fa-github text-xl"></i></a>
-                <a href="#" class="text-slate-500 hover:text-white transition-colors"><i class="fab fa-linkedin text-xl"></i></a>
-                <a href="#" class="text-slate-500 hover:text-white transition-colors"><i class="fab fa-facebook text-xl"></i></a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script>
-        // Mobile menu toggle logic
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when a link is clicked
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
-        });
-
-        // Add background to navbar on scroll
-        const navbar = document.getElementById('navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('shadow-lg');
-            } else {
-                navbar.classList.remove('shadow-lg');
-            }
-        });
-    </script>
-</body>
-</html>
